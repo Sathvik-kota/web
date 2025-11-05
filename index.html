@@ -3,294 +3,534 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Product Defect Detection System</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Kota Sathvik Reddy - AI/ML Engineer & Full-Stack Developer Portfolio">
+    <meta name="keywords" content="AI, ML, Full-Stack Developer, Portfolio, Machine Learning">
+    <meta name="author" content="Kota Sathvik Reddy">
+    <title>Kota Sathvik Reddy | AI/ML Engineer &amp; Full-Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <div class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect width="32" height="32" rx="8" fill="var(--color-primary)"/>
-                        <path d="M8 16L14 22L24 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <h1>DefectAI Pro</h1>
-                </div>
-                <nav class="nav-tabs">
-                    <button class="nav-tab active" data-tab="upload">Customer Upload</button>
-                    <button class="nav-tab" data-tab="dashboard">Admin Dashboard</button>
-                    <button class="nav-tab" data-tab="about">How It Works</button>
-                </nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">KSR</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </header>
+        </div>
+    </nav>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Customer Upload Tab -->
-            <div id="upload-tab" class="tab-content active">
-                <div class="upload-section">
-                    <div class="upload-header">
-                        <h2>Product Defect Analysis</h2>
-                        <p>Upload product images for instant AI-powered defect detection and warranty claim processing</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Kota Sathvik Reddy</h1>
+            <h2 class="hero-subtitle">AI/ML Engineer &amp; Full-Stack Developer</h2>
+            <div class="typing-container">
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor">|</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#" class="btn btn-outline">Download Resume</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/kota-sathvik-reddy" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Sathvik-kota" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:kotasathvik25@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
                     </div>
-
-                    <!-- Upload Area -->
-                    <div class="upload-area" id="uploadArea">
-                        <div class="upload-content">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="upload-icon">
-                                <path d="M32 8L40 16H36V32H28V16H24L32 8Z" fill="var(--color-primary)"/>
-                                <path d="M8 48H56V56H8V48Z" fill="var(--color-primary)"/>
-                                <path d="M48 24H40V32H48V24Z" fill="var(--color-gray-300)"/>
-                                <path d="M24 24H16V32H24V24Z" fill="var(--color-gray-300)"/>
-                            </svg>
-                            <h3>Drag & Drop Product Image</h3>
-                            <p>Or click to select files (JPG, PNG, WebP)</p>
-                            <input type="file" id="fileInput" accept="image/*" hidden>
-                            <button class="btn btn--primary" onclick="document.getElementById('fileInput').click()">
-                                Select Image
-                            </button>
+                </div>
+                <div class="about-text">
+                    <p class="about-description">
+                        AI/ML Engineer and Full-Stack Developer with over a year of experience designing, building, and deploying scalable machine learning pipelines. Proficient in Python, Java, TensorFlow, and PyTorch with a proven track record of automating CI/CD pipelines and delivering high-impact AI solutions. Expertise includes developing hybrid CNN-Transformer models, reinforcement learning agents, and complex ensemble learning workflows, all backed by a strong foundation in statistics and model validation.
+                    </p>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                    </div>
-
-                    <!-- Image Preview -->
-                    <div class="image-preview hidden" id="imagePreview">
-                        <img id="previewImage" alt="Uploaded image">
-                        <button class="btn btn--outline btn--sm" id="removeImage">Remove</button>
-                    </div>
-
-                    <!-- Processing Animation -->
-                    <div class="processing-section hidden" id="processingSection">
-                        <div class="processing-steps">
-                            <div class="step" id="step1">
-                                <div class="step-icon">1</div>
-                                <span>Image Analysis</span>
-                                <div class="step-status">⏳</div>
-                            </div>
-                            <div class="step" id="step2">
-                                <div class="step-icon">2</div>
-                                <span>AI Defect Detection</span>
-                                <div class="step-status">⏳</div>
-                            </div>
-                            <div class="step" id="step3">
-                                <div class="step-icon">3</div>
-                                <span>Quality Assessment</span>
-                                <div class="step-status">⏳</div>
-                            </div>
-                            <div class="step" id="step4">
-                                <div class="step-icon">4</div>
-                                <span>Decision Generation</span>
-                                <div class="step-status">⏳</div>
-                            </div>
-                        </div>
-                        <div class="processing-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progressFill"></div>
-                            </div>
-                            <p id="processingText">Analyzing image...</p>
-                        </div>
-                    </div>
-
-                    <!-- Results -->
-                    <div class="results-section hidden" id="resultsSection">
-                        <div class="results-header">
-                            <h3>Analysis Complete</h3>
-                            <div class="result-status" id="resultStatus"></div>
-                        </div>
-                        <div class="results-grid">
-                            <div class="result-card">
-                                <h4>Defect Type</h4>
-                                <p id="defectType">-</p>
-                            </div>
-                            <div class="result-card">
-                                <h4>Confidence Score</h4>
-                                <p id="confidenceScore">-</p>
-                            </div>
-                            <div class="result-card">
-                                <h4>Processing Time</h4>
-                                <p id="processingTime">-</p>
-                            </div>
-                            <div class="result-card">
-                                <h4>Recommendation</h4>
-                                <p id="recommendation">-</p>
-                            </div>
-                        </div>
-                        <div class="result-actions">
-                            <button class="btn btn--primary" id="analyzeAnother">Analyze Another Image</button>
-                            <button class="btn btn--outline" id="viewDashboard">View Dashboard</button>
+                        <div class="education-details">
+                            <h3>NIT Hamirpur, Himachal Pradesh</h3>
+                            <p>Dual Degree, CSE</p>
+                            <p class="education-meta">CGPA: 8.3/10 | Dec 2021 – May 2026</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Admin Dashboard Tab -->
-            <div id="dashboard-tab" class="tab-content">
-                <div class="dashboard-section">
-                    <div class="dashboard-header">
-                        <h2>Admin Dashboard</h2>
-                        <p>Real-time analytics and performance metrics</p>
+            <div class="highlights">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-trophy"></i>
                     </div>
-
-                    <!-- Metrics Grid -->
-                    <div class="metrics-grid">
-                        <div class="metric-card">
-                            <div class="metric-icon" style="background: var(--color-bg-1);">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="var(--color-primary)" stroke-width="2"/>
-                                    <circle cx="8.5" cy="7" r="4" stroke="var(--color-primary)" stroke-width="2"/>
-                                    <line x1="20" y1="8" x2="20" y2="14" stroke="var(--color-primary)" stroke-width="2"/>
-                                    <line x1="23" y1="11" x2="17" y2="11" stroke="var(--color-primary)" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div class="metric-info">
-                                <h3 id="totalProcessed">1,247</h3>
-                                <p>Total Processed</p>
-                            </div>
-                        </div>
-
-                        <div class="metric-card">
-                            <div class="metric-icon" style="background: var(--color-bg-3);">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="var(--color-success)" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div class="metric-info">
-                                <h3 id="accuracyRate">94.2%</h3>
-                                <p>Accuracy Rate</p>
-                            </div>
-                        </div>
-
-                        <div class="metric-card">
-                            <div class="metric-icon" style="background: var(--color-bg-2);">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <circle cx="12" cy="12" r="10" stroke="var(--color-warning)" stroke-width="2"/>
-                                    <polyline points="12,6 12,12 16,14" stroke="var(--color-warning)" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div class="metric-info">
-                                <h3 id="avgProcessingTime">2.1s</h3>
-                                <p>Avg Processing Time</p>
-                            </div>
-                        </div>
-
-                        <div class="metric-card">
-                            <div class="metric-icon" style="background: var(--color-bg-6);">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <line x1="12" y1="1" x2="12" y2="23" stroke="var(--color-orange-500)" stroke-width="2"/>
-                                    <path d="m17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="var(--color-orange-500)" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div class="metric-info">
-                                <h3 id="costSavings">78.5%</h3>
-                                <p>Cost Savings</p>
-                            </div>
-                        </div>
+                    <h3>8.3/10</h3>
+                    <p>CGPA</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-briefcase"></i>
                     </div>
+                    <h3>1+ Year</h3>
+                    <p>Experience</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>6+</h3>
+                    <p>Major Projects</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Published</h3>
+                    <p>Research</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Recent Submissions -->
-                    <div class="recent-submissions">
-                        <h3>Recent Submissions</h3>
-                        <div class="submissions-table">
-                            <div class="table-header">
-                                <div>Timestamp</div>
-                                <div>Defect Type</div>
-                                <div>Confidence</div>
-                                <div>Action</div>
-                                <div>Processing Time</div>
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills &amp; Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-badge"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-badge">C</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>ML/AI</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-badge">LLMs</span>
+                        <span class="skill-badge">Embeddings</span>
+                        <span class="skill-badge">Transformers</span>
+                        <span class="skill-badge">Fine-Tuning</span>
+                        <span class="skill-badge">Transfer Learning</span>
+                        <span class="skill-badge">LangChain</span>
+                        <span class="skill-badge">RAG</span>
+                        <span class="skill-badge">Hugging Face</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cube"></i>
+                        <h3>Frameworks</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">PyTorch</span>
+                        <span class="skill-badge">scikit-learn</span>
+                        <span class="skill-badge">Flask</span>
+                        <span class="skill-badge">Pandas</span>
+                        <span class="skill-badge">NumPy</span>
+                        <span class="skill-badge">OpenCV</span>
+                        <span class="skill-badge">Streamlit</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-badge"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-badge"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="skill-badge">Jupyter</span>
+                        <span class="skill-badge">VS Code</span>
+                        <span class="skill-badge">Weights &amp; Biases</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">FAISS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Software Engineering</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-badge">Microservices</span>
+                        <span class="skill-badge">CI/CD</span>
+                        <span class="skill-badge">System Design</span>
+                        <span class="skill-badge">Debugging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div>
+                                    <h3>Full-Stack Developer Intern</h3>
+                                    <h4>Defence Research and Development Laboratory, Hyderabad</h4>
+                                    <p class="experience-duration"><i class="far fa-calendar"></i> Dec 2024 – Jan 2025</p>
+                                </div>
+                                <div class="company-logo">
+                                    <i class="fas fa-building"></i>
+                                </div>
                             </div>
-                            <div class="table-body" id="submissionsTable">
-                                <!-- Populated by JavaScript -->
-                            </div>
+                            <ul class="experience-achievements">
+                                <li>Collaborated with DRDL teams to engineer, test, and deploy an end-to-end LLM-powered chatbot using ollama on a secure LAN, delivering instant support to 1,500 users.</li>
+                                <li>Executed a comprehensive test strategy with automated test suites, enabling stable and reliable deployments within a CI/CD pipeline (GitHub Actions).</li>
+                                <li>Architected and optimized a query-analysis system with a MySQL backend, achieving 95% query-matching accuracy and reducing average chatbot response time for common queries.</li>
+                            </ul>
+                            <a href="#" class="btn btn-small btn-outline">View Certificate</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- How It Works Tab -->
-            <div id="about-tab" class="tab-content">
-                <div class="about-section">
-                    <div class="about-header">
-                        <h2>How DefectAI Pro Works</h2>
-                        <p>Advanced computer vision and machine learning for automated product quality inspection</p>
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                <button class="filter-btn" data-filter="full-stack">Full-Stack</button>
+                <button class="filter-btn" data-filter="research">Research</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" data-category="ai-ml">
+                    <div class="project-header">
+                        <h3>Multimodal AI Copilot</h3>
+                        <span class="project-status live">Live</span>
                     </div>
-
-                    <div class="workflow-steps">
-                        <div class="workflow-step">
-                            <div class="workflow-icon">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                    <circle cx="24" cy="24" r="20" fill="var(--color-bg-1)"/>
-                                    <path d="M24 12L32 20H28V32H20V20H16L24 12Z" fill="var(--color-primary)"/>
-                                </svg>
-                            </div>
-                            <h3>1. Image Upload</h3>
-                            <p>Customers upload product images through our secure interface. Multiple formats supported with automatic optimization.</p>
+                    <p class="project-description">RAG-driven cybersecurity assistant using LangChain and open-source LLMs with DistilBERT fine-tuning and SAM2 + CLIPSeg for image segmentation</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">FAISS</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>RAG-driven cybersecurity assistant</span>
                         </div>
-
-                        <div class="workflow-step">
-                            <div class="workflow-icon">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                    <circle cx="24" cy="24" r="20" fill="var(--color-bg-5)"/>
-                                    <path d="M34 18L20 32L14 26" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <h3>2. AI Analysis</h3>
-                            <p>Our trained neural networks analyze images for defects using computer vision algorithms with 94%+ accuracy.</p>
-                        </div>
-
-                        <div class="workflow-step">
-                            <div class="workflow-icon">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                    <circle cx="24" cy="24" r="20" fill="var(--color-bg-3)"/>
-                                    <path d="M16 24L20 28L32 16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <h3>3. Instant Decision</h3>
-                            <p>Automated decisions for warranty claims, with confidence scores and detailed analysis reports.</p>
-                        </div>
-
-                        <div class="workflow-step">
-                            <div class="workflow-icon">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                    <circle cx="24" cy="24" r="20" fill="var(--color-bg-2)"/>
-                                    <path d="M14 20h20v8H14z" fill="white"/>
-                                    <path d="M18 16h12v4H18z" fill="white"/>
-                                    <path d="M22 32h4v4h-4z" fill="white"/>
-                                </svg>
-                            </div>
-                            <h3>4. Analytics & Insights</h3>
-                            <p>Real-time dashboards provide insights into defect patterns, cost savings, and process optimization opportunities.</p>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fine-tuned DistilBERT for sentiment insights</span>
                         </div>
                     </div>
-
-                    <div class="benefits-section">
-                        <h3>Key Benefits</h3>
-                        <div class="benefits-grid">
-                            <div class="benefit-item">
-                                <h4>78.5% Cost Reduction</h4>
-                                <p>Automated processing reduces manual inspection costs and speeds up claim resolution</p>
-                            </div>
-                            <div class="benefit-item">
-                                <h4>2.1 Second Processing</h4>
-                                <p>Instant analysis provides immediate feedback to customers and support teams</p>
-                            </div>
-                            <div class="benefit-item">
-                                <h4>94.2% Accuracy Rate</h4>
-                                <p>Advanced AI models trained on millions of product images ensure reliable detection</p>
-                            </div>
-                            <div class="benefit-item">
-                                <h4>24/7 Availability</h4>
-                                <p>Automated system processes claims around the clock without human intervention</p>
-                            </div>
+                    <div class="project-buttons">
+                        <a href="#" class="btn btn-small btn-primary">Live Link in Resume</a>
+                        <a href="#" class="btn btn-small btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="full-stack">
+                    <div class="project-header">
+                        <h3>FinAssist: AI Banking Classifier</h3>
+                        <span class="project-status live">Live</span>
+                    </div>
+                    <p class="project-description">AI workflow employing Google Gemini and Sentence-Transformer to convert banking tickets into structured JSON action plans</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Gemini API</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>FastAPI-based microservice orchestrator</span>
                         </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Deployed on Hugging Face Spaces</span>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" class="btn btn-small btn-primary">Live Link in Resume</a>
+                        <a href="#" class="btn btn-small btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="research">
+                    <div class="project-header">
+                        <h3>Fabric Defect Detection</h3>
+                        <span class="project-status research">Research</span>
+                    </div>
+                    <p class="project-description">Hybrid CNN-Transformer network for fabric defect recognition with live detection interface</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>93% accuracy in defect recognition</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Documented for IEEE IC2SDT'25</span>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <!-- <a href="#" class="btn btn-small btn-primary">Live Demo</a> -->
+                        <a href="#" class="btn btn-small btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai-ml">
+                    <div class="project-header">
+                        <h3>Continuous Authentication via RL</h3>
+                        <span class="project-status complete">Complete</span>
+                    </div>
+                    <p class="project-description">DDQN-based behavioral biometric authenticator for keystroke authentication</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">DDQN</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>92% precision on keystroke datasets</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Enhanced stability via PCA compression</span>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <!-- <a href="#" class="btn btn-small btn-primary">Live Demo</a> -->
+                        <a href="#" class="btn btn-small btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai-ml">
+                    <div class="project-header">
+                        <h3>BagStacking for FoG Detection</h3>
+                        <span class="project-status complete">Complete</span>
+                    </div>
+                    <p class="project-description">Bagstacked ensemble to identify freezing-of-gait events in Parkinson's patients</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">LightGBM</span>
+                        <span class="tech-tag">XGBoost</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>99.72% accuracy on Mendeley dataset</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Combined LightGBM, SVM, RF, XGBoost</span>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <!-- <a href="#" class="btn btn-small btn-primary">Live Demo</a> -->
+                        <a href="#" class="btn btn-small btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="full-stack">
+                    <div class="project-header">
+                        <h3>TokenWise: Solana Wallet Intelligence</h3>
+                        <span class="project-status complete">Complete</span>
+                    </div>
+                    <p class="project-description">Backend pipeline to process high-volume Solana transactions with anomaly detection</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ingested transactions via Helius webhooks</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Isolation Forest for anomaly detection</span>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <!-- <a href="#" class="btn btn-small btn-primary">Live Demo</a> -->
+                        <a href="#" class="btn btn-small btn-outline">Learn More</a>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership section" id="leadership">
+        <div class="container">
+            <h2 class="section-title">Leadership &amp; Activities</h2>
+            <div class="leadership-grid">
+                <div class="leadership-card">
+                    <div class="leadership-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Co-Convenor, Team Dravida</h3>
+                    <p class="leadership-org">Hill'ffair Cultural Club / NITH</p>
+                    <p class="leadership-duration"><i class="far fa-calendar"></i> Jan 2023 – May 2024</p>
+                    <p class="leadership-description">Coordinated cross-functional teams, outlined event strategies, and managed stage operations during college festivals.</p>
+                </div>
+                <div class="leadership-card">
+                    <div class="leadership-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Executive Member, Finance &amp; Treasury</h3>
+                    <p class="leadership-org">NIMBUS Technical Fest / NITH</p>
+                    <p class="leadership-duration"><i class="far fa-calendar"></i> Jan 2023 – May 2024</p>
+                    <p class="leadership-description">Negotiated sponsorships, liaised with vendors, balanced event budgets, and compiled detailed financial documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>kotasathvik25@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+91 6305149456</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/kota-sathvik-reddy-2a365925a/" target="_blank">kota-sathvik-reddy</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/Sathvik-kota" target="_blank">Sathvik-kota</a></p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-input" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Sending...
+                        </span>
+                    </button>
+                    <div class="success-message" id="successMessage" style="display: none;">
+                        <i class="fas fa-check-circle"></i> Message sent successfully!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Kota Sathvik Reddy. All rights reserved.</p>
+                <p class="footer-tagline">Made with <i class="fas fa-heart"></i> by Sathvik</p>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/kota-sathvik-reddy" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Sathvik-kota" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:kotasathvik25@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
